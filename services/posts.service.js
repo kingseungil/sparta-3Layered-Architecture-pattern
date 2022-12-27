@@ -16,13 +16,14 @@ class PostSerive {
         // 비즈니스 로직을 수행한 후 사용자에게 보여줄 데이터 가공
         return allPost.map((post) => {
             return {
-                postId: post.postId,
+                id: post.postId,
                 nickname: post.nickname,
                 title: post.title,
                 createdAt: post.createdAt,
                 updatedAt: post.updatedAt,
             };
         });
+        return allPost;
     };
 
     findPostById = async (postId) => {
@@ -49,7 +50,8 @@ class PostSerive {
 
         // 비즈니스 로직을 수행한 후 사용자에게 보여줄 데이터 가공
         return {
-            postId: createPostData.null,
+            postId: createPostData.postId,
+            // postId: createPostData.null,q
             nickname: createPostData.nickname,
             title: createPostData.title,
             content: createPostData.content,

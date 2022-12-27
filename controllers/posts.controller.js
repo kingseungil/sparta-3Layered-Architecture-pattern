@@ -32,7 +32,8 @@ class PostsController {
                 title,
                 content
             );
-            res.status(201).json({ data: createPostData });
+            // res.status(201).json({ data: createPostData });
+            res.status(201).json({ message: '작성완료' });
         } catch (error) {
             res.status(400).json({ errorMessage: error.message });
         }

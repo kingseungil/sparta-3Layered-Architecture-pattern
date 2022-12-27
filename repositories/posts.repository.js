@@ -7,7 +7,7 @@ class PostRepository {
 
     findAllPost = async () => {
         // Sequelize에서 Posts 모델의 findAll 메소드를 사용해 데이터 요청
-        const posts = await this.postsModel.findAll();
+        const posts = await this.postsModel.findAll({});
 
         return posts;
     };
